@@ -41,15 +41,15 @@
                     <INPUT CLASS="btn" TYPE="button" VALUE="  /  " OnClick="MyCal.input.value += ' / '">
 
     <br>
-        <INPUT CLASS="btn" TYPE="button" VALUE=" x10 " OnClick="MyCal.input.value+= '* 10';equal()">
+        <INPUT CLASS="btn" TYPE="button" VALUE=" x10 " OnClick="equal();MyCal.input.value+= '* 10';equal()">
             <INPUT CLASS="btn" TYPE="button" VALUE="  0  " OnClick="MyCal.input.value += '0'">
-                <INPUT CLASS="btn" TYPE="button" VALUE="  ln   " OnClick="ln()">
+                <INPUT CLASS="btn" TYPE="button" VALUE="  ln   " OnClick="equal();ln()">
                     <INPUT CLASS="btn" TYPE="button" VALUE="  =  " OnClick="equal()">
     <br>
-        <INPUT CLASS="btn" TYPE="button" VALUE=" Exp " OnClick="exp()">
+        <INPUT CLASS="btn" TYPE="button" VALUE=" Exp " OnClick="equal;exp()">
             <INPUT CLASS="btn" TYPE="button" VALUE=" . " OnClick="MyCal.input.value+= '.'">
-                 <INPUT CLASS="btn" TYPE="button" VALUE=" Square " OnClick="square()">
-                    <INPUT CLASS="btn" TYPE="button" VALUE=" Sqrt " OnClick="sqrt()">
+                 <INPUT CLASS="btn" TYPE="button" VALUE=" Square " OnClick="equal();square()">
+                    <INPUT CLASS="btn" TYPE="button" VALUE=" Sqrt " OnClick="equal();sqrt()">
 </TD>
 </TR>
 </DIV>
@@ -61,8 +61,7 @@ function sqrt() {
     y=Math.sqrt(x);
     document.MyCal.input.value=y;
     }
-    else
-    alert("Evaluate First!");
+   
 }
 
     function ln(){
@@ -72,8 +71,7 @@ function sqrt() {
     y=Math.log(x);
     document.MyCal.input.value=y;
     }
-    else
-    alert("Evaluate First!");
+    
 }
 
 function exp() {
@@ -83,8 +81,7 @@ function exp() {
     y=Math.exp(x);
     document.MyCal.input.value=y;
     }
-    else
-    alert("Evaluate First!");
+
 }
 
 function deleteChar(){
@@ -96,6 +93,8 @@ function equal(){
     if(n){
         document.MyCal.input.value = eval(document.MyCal.input.value);
     }
+    else
+    alert("No Input");
 }
 function bin(){
     var x,y;
@@ -104,8 +103,7 @@ function bin(){
     y=x.toString(2);
     document.MyCal.input.value=y;
     }
-    else
-    alert("Evaluate First!");
+    
 }
 function square(){
     var p,q;
@@ -114,8 +112,7 @@ function square(){
     q=Math.pow(p,2);
     document.MyCal.input.value=q;
     }
-    else
-    alert("Evaluate First!");
+    
 } 
 </SCRIPT>
 </TABLE>
