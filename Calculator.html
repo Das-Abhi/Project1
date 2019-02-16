@@ -1,0 +1,125 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="calculator.css">
+    <title>Abhishek's Calculator</title>
+</head>
+<body>
+<DIV align="center">
+
+<span id="d1">CALCULATOR</span>
+<FORM CLASS="dis" NAME="MyCal">
+<TABLE BORDER=0>
+<TR>
+<TD>
+<div class="input">
+<INPUT class="display border-gradient border-gradient-purple" TYPE="text" NAME="input">
+</div>
+<br>
+</TD>
+</TR>
+<TR>
+<TD>
+    <INPUT CLASS="btn" TYPE="button" VALUE=" Del " OnClick="deleteChar()">
+        <INPUT CLASS="btn" TYPE="button" VALUE=" Bin " OnClick="bin()">
+            <INPUT CLASS="btn" TYPE="button"  VALUE="  AC  " OnClick="MyCal.input.value = ''">
+                 <INPUT CLASS="btn" TYPE="button"  VALUE="  +  " OnClick="MyCal.input.value += ' + '">
+    <br>
+        <INPUT CLASS="btn" TYPE="button"  VALUE="  1  " OnClick="MyCal.input.value += '1'">
+            <INPUT CLASS="btn" TYPE="button"  VALUE="  2  " OnCLick="MyCal.input.value += '2'">
+                 <INPUT CLASS="btn" TYPE="button"  VALUE="  3  " OnClick="MyCal.input.value += '3'">
+                     <INPUT CLASS="btn" TYPE="button"  VALUE="  -  " OnClick="MyCal.input.value += ' - '">
+    <br>
+        <INPUT CLASS="btn" TYPE="button"  VALUE="  4  " OnClick="MyCal.input.value += '4'">
+            <INPUT CLASS="btn" TYPE="button"  VALUE="  5  " OnCLick="MyCal.input.value += '5'">
+                <INPUT CLASS="btn" TYPE="button"  VALUE="  6  " OnClick="MyCal.input.value += '6'">
+                    <INPUT CLASS="btn" TYPE="button"  VALUE="  x  " OnClick="MyCal.input.value += ' * '">
+
+    <br>
+        <INPUT CLASS="btn" TYPE="button"  VALUE="  7  " OnClick="MyCal.input.value += '7'">
+            <INPUT CLASS="btn" TYPE="button"  VALUE="  8  " OnCLick="MyCal.input.value += '8'">
+                <INPUT CLASS="btn" TYPE="button"  VALUE="  9  " OnClick="MyCal.input.value += '9'">
+                    <INPUT CLASS="btn" TYPE="button" VALUE="  /  " OnClick="MyCal.input.value += ' / '">
+
+    <br>
+        <INPUT CLASS="btn" TYPE="button" VALUE=" x10 " OnClick="MyCal.input.value+= '* 10';equal()">
+            <INPUT CLASS="btn" TYPE="button" VALUE="  0  " OnClick="MyCal.input.value += '0'">
+                <INPUT CLASS="btn" TYPE="button" VALUE="  ln   " OnClick="ln()">
+                    <INPUT CLASS="btn" TYPE="button" VALUE="  =  " OnClick="equal()">
+    <br>
+        <INPUT CLASS="btn" TYPE="button" VALUE=" Exp " OnClick="exp()">
+            <INPUT CLASS="btn" TYPE="button" VALUE=" . " OnClick="MyCal.input.value+= '.'">
+                 <INPUT CLASS="btn" TYPE="button" VALUE=" Square " OnClick="square()">
+                    <INPUT CLASS="btn" TYPE="button" VALUE=" Sqrt " OnClick="sqrt()">
+</TD>
+</TR>
+</DIV>
+<SCRIPT>
+function sqrt() {
+    var x,y;
+	x=Number(document.MyCal.input.value);
+    if(x){
+    y=Math.sqrt(x);
+    document.MyCal.input.value=y;
+    }
+    else
+    alert("Evaluate First!");
+}
+
+    function ln(){
+    var x,y;
+    x=Number(document.MyCal.input.value);
+    if(x){
+    y=Math.log(x);
+    document.MyCal.input.value=y;
+    }
+    else
+    alert("Evaluate First!");
+}
+
+function exp() {
+    var x,y;
+    x=Number(document.MyCal.input.value);
+    if(x){
+    y=Math.exp(x);
+    document.MyCal.input.value=y;
+    }
+    else
+    alert("Evaluate First!");
+}
+
+function deleteChar(){
+     var value = document.MyCal.input.value;
+	 document.MyCal.input.value = value.substring(0, value.length - 1);
+}
+function equal(){
+    var n=document.MyCal.input.value;
+    if(n){
+        document.MyCal.input.value = eval(document.MyCal.input.value);
+    }
+}
+function bin(){
+    var x,y;
+    x=Number(document.MyCal.input.value);
+    if(x){
+    y=x.toString(2);
+    document.MyCal.input.value=y;
+    }
+    else
+    alert("Evaluate First!");
+}
+function square(){
+    var p,q;
+    p=Number(document.MyCal.input.value);
+    if(p){
+    q=Math.pow(p,2);
+    document.MyCal.input.value=q;
+    }
+    else
+    alert("Evaluate First!");
+} 
+</SCRIPT>
+</TABLE>
+</FORM>
+<marquee class="markq">&COPY;2019 Abhishek Das. All rights reserved.</marquee>
+</body>
+</html>
