@@ -12,7 +12,7 @@
 <TR>
 <TD>
 <div class="input">
-<INPUT class="display border-gradient border-gradient-purple" TYPE="text" NAME="input">
+<INPUT class="display border-gradient border-gradient-color" TYPE="text" NAME="input">
 </div>
 <br>
 </TD>
@@ -20,7 +20,7 @@
 <TR>
 <TD>
     <INPUT CLASS="btn" TYPE="button" VALUE=" Del " OnClick="deleteChar()">
-        <INPUT CLASS="btn" TYPE="button" VALUE=" Bin " OnClick="bin()">
+        <INPUT CLASS="btn" TYPE="button" VALUE=" Bin " OnClick="equal(),bin()">
             <INPUT CLASS="btn" TYPE="button"  VALUE="  AC  " OnClick="MyCal.input.value = ''">
                  <INPUT CLASS="btn" TYPE="button"  VALUE="  +  " OnClick="MyCal.input.value += ' + '">
     <br>
@@ -46,7 +46,7 @@
                 <INPUT CLASS="btn" TYPE="button" VALUE="  ln   " OnClick="equal();ln()">
                     <INPUT CLASS="btn" TYPE="button" VALUE="  =  " OnClick="equal()">
     <br>
-        <INPUT CLASS="btn" TYPE="button" VALUE=" Exp " OnClick="equal;exp()">
+        <INPUT CLASS="btn" TYPE="button" VALUE=" Exp " OnClick="equal();exp()">
             <INPUT CLASS="btn" TYPE="button" VALUE=" . " OnClick="MyCal.input.value+= '.'">
                  <INPUT CLASS="btn" TYPE="button" VALUE=" Square " OnClick="equal();square()">
                     <INPUT CLASS="btn" TYPE="button" VALUE=" Sqrt " OnClick="equal();sqrt()">
@@ -71,7 +71,6 @@ function sqrt() {
     y=Math.log(x);
     document.MyCal.input.value=y;
     }
-    
 }
 
 function exp() {
@@ -117,7 +116,7 @@ function square(){
 </SCRIPT>
 </TABLE>
 </FORM>
-<audio controls autoplay loop hidden>
+<audio controls autoplay loop>
 <source src="Irelia.mp3">
 </audio>
 <br>
