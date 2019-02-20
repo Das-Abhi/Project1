@@ -44,7 +44,7 @@ body{
 	text-shadow: -1px -1px 4px white;
 }
 .input{
-  background: none;
+  background:none;
   text-decoration: inherit;
   font-size: 30px;
   padding: 3px 3px;
@@ -54,6 +54,6 @@ body{
   border-image-slice: 1;
   border-width: 3px;
 }
-.border-gradient-purple {
+.border-gradient-color {
   border-image: linear-gradient(to left, #ee2626, #e66712);
 }
